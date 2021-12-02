@@ -139,4 +139,4 @@ cython_debug/
 
 # custom
 *sqlite3
-static/dist
+#static/dist
