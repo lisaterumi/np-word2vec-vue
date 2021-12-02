@@ -6,12 +6,12 @@
       </v-row>
       <v-divider></v-divider>
        <v-form ref="form" lazy-validation @submit.prevent="Find">
-        <v-row align="center" justify="space-around">Enter Nepali words seperated by commas</v-row>
+        <v-row align="center" justify="space-around">Enter words seperated by commas</v-row>
         <v-card-text>
           <v-text-field
             v-model="words"
             :error-messages="wordsErrors"
-            label="Nepali words"
+            label="Words"
             required
             outlined
             filled 
@@ -70,7 +70,7 @@
       wordsErrors () {
         const errors = []
         if (!this.$v.words.$dirty) return errors
-        !this.$v.words.required && errors.push('Nepali words is required.')
+        !this.$v.words.required && errors.push('Words is required.')
         return errors
       },
       width() {

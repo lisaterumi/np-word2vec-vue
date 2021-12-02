@@ -12,7 +12,7 @@
               <v-text-field
                 v-model="word"
                 :error-messages="wordErrors"
-                label="Nepali word"
+                label="Word"
                 required
                 outlined
                 filled 
@@ -80,7 +80,7 @@
       wordErrors () {
         const errors = []
         if (!this.$v.word.$dirty) return errors
-        !this.$v.word.required && errors.push('Nepali word is required.')
+        !this.$v.word.required && errors.push('Word is required.')
         return errors
       },
       width() {

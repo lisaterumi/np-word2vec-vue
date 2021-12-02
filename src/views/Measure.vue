@@ -10,7 +10,7 @@
           <v-text-field
             v-model="word1"
             :error-messages="wordErrors1"
-            label="Nepali word1"
+            label="Word1"
             required
             outlined
             filled 
@@ -19,7 +19,7 @@
           <v-text-field
             v-model="word2"
             :error-messages="wordErrors2"
-            label="Nepali word2"
+            label="Word2"
             required
             outlined
             filled 
@@ -80,13 +80,13 @@
       wordErrors1 () {
         const errors = []
         if (!this.$v.word1.$dirty) return errors
-        !this.$v.word1.required && errors.push('Nepali word1 is required.')
+        !this.$v.word1.required && errors.push('Word1 is required.')
         return errors
       },
       wordErrors2 () {
         const errors = []
         if (!this.$v.word2.$dirty) return errors
-        !this.$v.word2.required && errors.push('Nepali word2 is required.')
+        !this.$v.word2.required && errors.push('Word2 is required.')
         return errors
       },
       width() {
